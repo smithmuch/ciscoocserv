@@ -1,9 +1,16 @@
-���ȴ��ն˵�½��ִ����������
+首先打开终端登陆，执行以下命令
 
 wget https://raw.githubusercontent.com/smithmuch/ciscoocserv/master/ocserv-install-script-for-centos7.sh
-Ȼ��ִ�нű�
+然后执行脚本
 
 sh ocserv-install-script-for-centos7.sh
-��װ�����л���ʾ������˿ڡ��û���������ȣ��Լ�������д��
+安装过程中会提示你输入端口、用户名和密码等，自己按需填写。
 
-��װ������Ѿ����������ˡ�
+安装到这里，已经可以连接了。
+
+执行后默认是分流，下面是设置全局代理：
+WinSCP打开服务器：/usr/local/etc/ocserv/，下载ocserv.conf
+1.先将“#route = ”全部替换为“route = ”
+2.再将“route = ”全部替换为“#route = ”
+3.保存配置文件，SSH连接服务器，执行下面的代码重启Ocserv服务
+systemctl restart ocserv.service
