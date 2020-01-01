@@ -1,11 +1,10 @@
 首先打开终端登陆，执行以下命令
 
-wget https://raw.githubusercontent.com/smithmuch/ciscoocserv/master/ocserv-install-script-for-centos7.sh
-然后执行脚本
+wget --no-check-certificate https://raw.githubusercontent.com/smithmuch/ciscoocserv/master/ocserv-install-script-for-centos7.sh
+chmod +x ./ocserv-install-script-for-centos7.sh
+./ocserv-install-script-for-centos7.sh
 
-sh ocserv-install-script-for-centos7.sh
 安装过程中会提示你输入端口、用户名和密码等，自己按需填写。
-
 安装到这里，已经可以连接了。
 
 执行后默认是分流，下面是设置全局代理：
