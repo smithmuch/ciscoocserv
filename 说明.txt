@@ -16,3 +16,20 @@ WinSCP打开服务器：/usr/local/etc/ocserv/，下载ocserv.conf
 4.保存配置文件，SSH连接服务器，执行下面的代码重启Ocserv服务
 systemctl restart ocserv.service
 5.ocpasswd -c /usr/local/etc/ocserv/ocpasswd 用户名
+
+
+
+创建用户
+ocpasswd -c /etc/ocserv/ocpasswd user
+
+删除用户
+ocpasswd -c /etc/ocserv/ocpasswd -d user
+
+启动服务
+service ocserv start
+
+关闭服务器
+service ocserv stop
+
+重启服务
+service ocserv restart
