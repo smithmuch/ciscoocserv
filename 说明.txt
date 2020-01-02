@@ -7,9 +7,11 @@ chmod +x ./ocserv-install-script-for-centos7.sh
 安装过程中会提示你输入端口、用户名和密码等，自己按需填写。
 安装到这里，已经可以连接了。
 
-执行后默认是分流，下面是设置全局代理：
+上面默认是分流，下面是设置全局代理：
 WinSCP打开服务器：/usr/local/etc/ocserv/，下载ocserv.conf
 1.先将“#route = ”全部替换为“route = ”
 2.再将“route = ”全部替换为“#route = ”
-3.保存配置文件，SSH连接服务器，执行下面的代码重启Ocserv服务
+3.删除“# Apple”后面的全部路由表
+4.保存配置文件，SSH连接服务器，执行下面的代码重启Ocserv服务
 systemctl restart ocserv.service
+5.ocpasswd -c /usr/local/etc/ocserv/ocpasswd 用户名
