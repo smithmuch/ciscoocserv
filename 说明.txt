@@ -1,5 +1,6 @@
 首先打开终端登陆，执行以下命令
 
+yum -y install wget
 wget --no-check-certificate https://raw.githubusercontent.com/smithmuch/ciscoocserv/master/ocserv-install-script-for-centos7.sh
 chmod +x ./ocserv-install-script-for-centos7.sh
 ./ocserv-install-script-for-centos7.sh
